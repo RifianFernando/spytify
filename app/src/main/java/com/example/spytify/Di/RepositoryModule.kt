@@ -1,7 +1,7 @@
 package com.example.spytify.Di
 
-import com.example.spytify.Data.Repository.MainRepositoryImpl
-import com.example.spytify.Domain.repository.MainRepository
+import com.example.spytify.Data.Repository.SongRepositoryImpl
+import com.example.spytify.Domain.repository.SongRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -15,6 +15,6 @@ abstract class RepositoryModule {
     @Binds
     @Singleton
     abstract fun provideMainRepository(
-        mainRepositoryImpl: MainRepositoryImpl
-    ): MainRepository
+        songRepositoryImpl: SongRepositoryImpl
+    ): SongRepository
 }

@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 
-    // kapt for dagger hild
+    // kapt for Dagger Hilt
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
 }
@@ -30,17 +30,18 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "11"
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -66,21 +67,16 @@ dependencies {
 //    // Saved state module for ViewModel
 //    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
 
-    // Annotation processor
+    // Annotation processor for ViewModel
     kapt(libs.androidx.lifecycle.compiler)
-    implementation(libs.androidx.activity.ktx)
-    implementation(libs.androidx.activity.compose)
 
-    // Dagger - Hilt Deps
+    // Dagger - Hilt dependencies
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-//    deprecated
-//    implementation(libs.hilt.lifecycle.viewmodel)
-    kapt(libs.androidx.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.fragment)
+    kapt(libs.androidx.hilt.compiler)  // For Hilt components
 }
 
-// Allow references to generated code
 kapt {
     correctErrorTypes = true
 }

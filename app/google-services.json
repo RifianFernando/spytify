@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "539416491468",
+    "project_id": "spytify-7302b",
+    "storage_bucket": "spytify-7302b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539416491468:android:cc93e2c7c6cd8281f5d969",
+        "android_client_info": {
+          "package_name": "com.example.spytify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNDEv1HNM-X4jnZlnU0SSHJBxRtdWKOhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

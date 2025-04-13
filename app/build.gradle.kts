@@ -5,6 +5,7 @@ plugins {
     // kapt for Dagger Hilt
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -75,6 +76,9 @@ dependencies {
     kapt(libs.hilt.android.compiler)
     implementation(libs.androidx.hilt.navigation.fragment)
     kapt(libs.androidx.hilt.compiler)  // For Hilt components
+
+    // firebase app distribution
+    implementation(platform(libs.firebase.bom))
 }
 
 kapt {

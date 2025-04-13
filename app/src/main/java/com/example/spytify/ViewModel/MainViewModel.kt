@@ -14,10 +14,10 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val repository: MainRepository
 ): ViewModel() {
+    private val _songs = MutableLiveData<List<Song>>()
     init {
         loadData()
     }
-    private val _songs = MutableLiveData<List<Song>>()
     val songs: LiveData<List<Song>> get() = _songs
 
     private fun loadData() {

@@ -18,7 +18,7 @@ class MainRepositoryImpl @Inject constructor() : MainRepository {
         Song("album_3", "Lagu 3", "test3", "Funny Songs 2025")
     )
 
-    override suspend fun getListItems(): List<Song> {
+    override fun getListItems(): List<Song> {
         return items
     }
 }

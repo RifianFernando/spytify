@@ -2,12 +2,14 @@ package com.example.spytify.Activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.viewModels
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.spytify.Adapter.SongAdapter
 import com.example.spytify.R
+import com.example.spytify.ViewModel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,12 +29,12 @@ class MainActivity : ComponentActivity() {
 
         // Observe the songs from the ViewModel
         // Use ViewModel provided by Hilt
-//        val viewModel: MainViewModel by viewModels()
+        val viewModel: MainViewModel by viewModels()
 //        val viewModel = hiltViewModel<MyViewModel>()
-//        viewModel.songs.observe(this) { songs ->
-//            // Update the adapter when the song list changes
-//            songAdapter.updateSongs(songs)
-//        }
+        viewModel.songs.observe(this) { songs ->
+            // Update the adapter when the song list changes
+            songAdapter.updateSongs(songs)
+        }
 
         // Edge-to-edge UI setup
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

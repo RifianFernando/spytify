@@ -5,8 +5,10 @@ on:
     branches: [main]
 
 #    run on ubuntu latest
-  jobs:
-    build: ubuntu-latest
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
     steps:
 #      1. Checkout first using third party https://github.com/marketplace/actions/checkout
       - uses: actions/checkout@v4

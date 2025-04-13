@@ -1,10 +1,10 @@
 package com.example.spytify.Data.Repository
 
-import com.example.spytify.Domain.repository.MainRepository
+import com.example.spytify.Domain.repository.SongRepository
 import com.example.spytify.Storage.Song.Song
 import javax.inject.Inject
 
-class MainRepositoryImpl @Inject constructor() : MainRepository {
+class SongRepositoryImpl @Inject constructor() : SongRepository {
 
     // Declare 'items' as a class-level property
     private val items = listOf(

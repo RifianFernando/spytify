@@ -1,7 +1,7 @@
 package com.example.spytify
 
 
-import com.example.spytify.Data.Repository.MainRepositoryImpl
+import com.example.spytify.Data.Repository.SongRepositoryImpl
 import com.example.spytify.Storage.Song.Song
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
@@ -11,7 +11,7 @@ class MainRepositoryUnitTest {
 
     @Test
     fun `getListItems should return correct number of songs`() = runBlocking {
-        val repository = MainRepositoryImpl()
+        val repository = SongRepositoryImpl()
         val songs: List<Song> = repository.getListItems()
 
         // Assert the expected number of songs

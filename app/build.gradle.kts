@@ -53,18 +53,18 @@ dependencies {
     // mvvm lifecycle
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     // ViewModel
-    implementation(libs.androidx.lifecycle.viewmodel.ktx)
-    // ViewModel utilities for Compose
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    // LiveData
-    implementation(libs.androidx.lifecycle.livedata.ktx)
-    // Lifecycles only (without ViewModel or LiveData)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    // Lifecycle utilities for Compose
-    implementation(libs.androidx.lifecycle.runtime.compose)
-
-    // Saved state module for ViewModel
-    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
+//    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+//    // ViewModel utilities for Compose
+//    implementation(libs.androidx.lifecycle.viewmodel.compose)
+//    // LiveData
+//    implementation(libs.androidx.lifecycle.livedata.ktx)
+//    // Lifecycles only (without ViewModel or LiveData)
+//    implementation(libs.androidx.lifecycle.runtime.ktx)
+//    // Lifecycle utilities for Compose
+//    implementation(libs.androidx.lifecycle.runtime.compose)
+//
+//    // Saved state module for ViewModel
+//    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
 
     // Annotation processor
     kapt(libs.androidx.lifecycle.compiler)
@@ -74,10 +74,10 @@ dependencies {
     // Dagger - Hilt Deps
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
-    implementation(libs.androidx.hilt.lifecycle.viewmodel)
+//    deprecated
+//    implementation(libs.hilt.lifecycle.viewmodel)
     kapt(libs.androidx.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.fragment)
-//    implementation(libs.androidx.hilt.navigation.compose)
 }
 
 // Allow references to generated code

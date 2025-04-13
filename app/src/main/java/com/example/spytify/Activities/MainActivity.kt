@@ -10,8 +10,6 @@ import com.example.spytify.Adapter.SongAdapter
 import com.example.spytify.R
 import dagger.hilt.android.AndroidEntryPoint
 
-//import androidx.hilt.navigation.compose.hiltViewModel
-
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     private lateinit var songAdapter: SongAdapter

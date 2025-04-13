@@ -4,8 +4,8 @@ on:
   pull_request:
     branches: [main]
 
-  jobs:
 #    run on ubuntu latest
+  jobs:
     build: ubuntu-latest
     steps:
 #      1. Checkout first using third party https://github.com/marketplace/actions/checkout
